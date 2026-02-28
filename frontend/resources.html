@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Resources | UniConnect</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Resources | UniConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<h1>UniConnect Resources</h1>
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/dashboard.html">Events</a>
+  <a href="/announcements.html">Announcements</a>
+  <a href="/resources.html">Resources</a>
+</div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="dashboard.html">Events</a>
-  <a href="announcements.html">Announcements</a>
-  <a href="resources.html">Resources</a>
-</nav>
+<div class="container">
+ <div class="page-actions">
+  <h2>Resources</h2>
+  <a href="add-resource.html" class="btn">+ Add Resource</a>
+</div>
 
-<h2>Available Resources</h2>
-
-<table border="1" width="100%">
+  <table>
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Type</th>
-            <th>Link</th>
-            <th>Date</th>
-            <th>Actions</th>
-        </tr>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Link</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
     </thead>
-    <tbody id="resourcesTable">
-        <!-- Resources load here -->
-    </tbody>
-</table>
+    <tbody id="resourcesTable"></tbody>
+  </table>
+</div>
 
-<script src="script.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

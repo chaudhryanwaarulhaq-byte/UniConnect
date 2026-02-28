@@ -7,28 +7,36 @@
 </head>
 <body>
 
-<h1>Add Announcement</h1>
-
+<!-- NAVBAR -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="dashboard.html">Events</a>
-  <a href="announcements.html">Announcements</a>
-  <a href="resources.html">Resources</a>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Events</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="resources.html">Resources</a>
 </nav>
 
-<br>
+<!-- PAGE CONTAINER -->
+<div class="app-container">
 
-<form id="announcementForm">
-    <label>Title</label><br>
-    <input type="text" id="title" required><br><br>
+    <h1>Add Announcement</h1>
 
-    <label>Message</label><br>
-    <textarea id="message" required></textarea><br><br>
+    <div class="form-wrapper">
+        <form id="announcementForm" class="form-card">
 
-    <button type="submit">Add Announcement</button>
-</form>
+            <label>Title</label>
+            <input type="text" id="title" required>
 
-<p id="status"></p>
+            <label>Message</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Add Announcement</button>
+
+            <p id="status"></p>
+
+        </form>
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>

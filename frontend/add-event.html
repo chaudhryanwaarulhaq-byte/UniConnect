@@ -5,28 +5,48 @@
     <title>Add Event</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<h1>Add Event</h1>
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Events</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="resources.html">Resources</a>
+</nav>
 
-<a href="dashboard.html">Go to Dashboard</a>
-<hr>
+<!-- MAIN CONTAINER -->
+<div class="app-container">
 
-<form id="addEventForm">
-    <label>Title</label><br>
-    <input type="text" id="title" required><br><br>
+    <h1>Add New Event</h1>
+    <p class="page-subtitle">Create and publish a new campus event</p>
 
-    <label>Description</label><br>
-    <textarea id="description" required></textarea><br><br>
+    <!-- CENTERED FORM -->
+    <div class="form-wrapper">
+        <form id="addEventForm" class="form-card">
 
-    <label>Date</label><br>
-    <input type="date" id="event_date" required><br><br>
+            <label>Event Title</label>
+            <input type="text" id="title" placeholder="e.g. Orientation Day" required>
 
-    <button type="submit">Add Event</button>
-</form>
+            <label>Description</label>
+            <textarea id="description" placeholder="Event details..." required></textarea>
 
-<p id="message"></p>
+            <label>Event Date</label>
+            <input type="date" id="event_date" required>
+
+            <button type="submit">Add Event</button>
+
+            <p id="message"></p>
+
+        </form>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>

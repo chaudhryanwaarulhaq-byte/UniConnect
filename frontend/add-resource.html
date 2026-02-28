@@ -7,31 +7,41 @@
 </head>
 <body>
 
-<h1>Add Resource</h1>
-
+<!-- NAVBAR -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="dashboard.html">Events</a>
-  <a href="announcements.html">Announcements</a>
-  <a href="resources.html">Resources</a>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Events</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="resources.html">Resources</a>
 </nav>
 
-<br>
+<!-- PAGE CONTAINER -->
+<div class="app-container">
 
-<form id="resourceForm">
-    <label>Title</label><br>
-    <input type="text" id="title" required><br><br>
+    <h1>Add Resource</h1>
+    <p class="page-subtitle">Upload or link a useful academic resource</p>
 
-    <label>Type</label><br>
-    <input type="text" id="type" required><br><br>
+    <!-- CENTERED FORM -->
+    <div class="form-wrapper">
+        <form id="resourceForm" class="form-card">
 
-    <label>Resource Link</label><br>
-    <input type="url" id="link" required><br><br>
+            <label>Title</label>
+            <input type="text" id="title" placeholder="e.g. Data Structures Notes" required>
 
-    <button type="submit">Add Resource</button>
-</form>
+            <label>Type</label>
+            <input type="text" id="type" placeholder="PDF / Video / Link" required>
 
-<p id="status"></p>
+            <label>Resource Link</label>
+            <input type="url" id="link" placeholder="https://example.com" required>
+
+            <button type="submit">Add Resource</button>
+
+            <p id="status"></p>
+
+        </form>
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
