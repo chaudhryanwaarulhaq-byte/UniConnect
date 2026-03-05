@@ -7,24 +7,15 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
+<nav class="navbar">
     <a href="index.html">Home</a>
-    <a href="dashboard.html">Events </a>
-    <a href="announcements.html">Announcements</a>
-    <a href="resources.html">Resources</a>
+    <a href="resources.html">Back to Resources</a>
 </nav>
 
-<!-- PAGE CONTAINER -->
 <div class="app-container">
-
     <h1>Add Resource</h1>
-    <p class="page-subtitle">Upload or link a useful academic resource</p>
-
-    <!-- CENTERED FORM -->
     <div class="form-wrapper">
         <form id="resourceForm" class="form-card">
-
             <label>Title</label>
             <input type="text" id="title" placeholder="e.g. Data Structures Notes" required>
 
@@ -35,12 +26,9 @@
             <input type="url" id="link" placeholder="https://example.com" required>
 
             <button type="submit">Add Resource</button>
-
             <p id="status"></p>
-
         </form>
     </div>
-
 </div>
 
 <script src="script.js"></script>

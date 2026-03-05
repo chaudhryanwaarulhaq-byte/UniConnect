@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Announcements | UniConnect</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -8,29 +9,35 @@
 
 <div class="navbar">
   <a href="index.html">Home</a>
-<a href="dashboard.html">Events</a>
-<a href="announcements.html">Announcements</a>
-<a href="resources.html">Resources</a>
+  <a href="dashboard.html">Events</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="resources.html">Resources</a>
 </div>
 
 <div class="container">
-  <div class="page-actions">
-  <h2>Announcements</h2>
-  <a href="add-announcement.html" class="btn">+ Add Announcement</a>
-</div>
+  <div class="page-actions" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h2>📢 Campus Announcements</h2>
+    <a href="add-announcement.html" class="btn">+ Add New</a>
+  </div>
 
-  <table>
+  <table border="1" style="width: 100%; border-collapse: collapse;">
     <thead>
-      <tr>
+      <tr style="background-color: #f4f4f4;">
         <th>ID</th>
         <th>Title</th>
         <th>Message</th>
-        <th>Date</th>
+        <th>Date Published</th>
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody id="announcementsTable"></tbody>
+    <tbody id="announcementsTable">
+        <tr><td colspan="5" style="text-align:center;">Loading announcements...</td></tr>
+    </tbody>
   </table>
+</div>
+
+<div class="footer">
+  © 2026 UniConnect | Web Engineering Project
 </div>
 
 <script src="script.js"></script>
