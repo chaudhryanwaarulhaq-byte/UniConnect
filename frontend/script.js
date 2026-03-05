@@ -98,6 +98,46 @@ async function loadAllData() {
 }
 
 /* =========================
+   DASHBOARD STATS LOADER
+========================= */
+async function updateDashboardStats() {
+    // Look for the elements on the page
+    const eventEl = document.getElementById("eventCount");
+    const annEl = document.getElementById("announcementCount");
+    const resEl = document.getElementById("resourceCount");
+
+    // If we aren't on the dashboard, don't run this
+    if (!eventEl && !annEl && !resEl) return;
+
+    try {
+        // Fetch all data in parallel for speed
+        const [eRes, aRes, rRes] = await Promise.all([
+            fetch(EVENTS_API),
+            fetch(ANN_API),
+            fetch(RES_API)
+        ]);
+
+        const events = await eRes.json();
+        const anns = await aRes.json();
+        const resources = await rRes.json();
+
+        // Update the HTML text
+        if (eventEl) eventEl.innerText = events.length;
+        if (annEl) annEl.innerText = anns.length;
+        if (resEl) resEl.innerText = resources.length;
+        
+        console.log("Stats Updated:", { events: events.length, anns: anns.length, res: resources.length });
+    } catch (err) {
+        console.error("Failed to load dashboard stats:", err);
+    }
+}
+
+// Ensure this runs when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    updateDashboardStats();
+});
+
+/* =========================
    5. DELETE HANDLER
 ========================= */
 window.deleteData = async (url, id, type) => {
